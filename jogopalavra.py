@@ -8,7 +8,7 @@ tentativas = 0
 
 while True:
   letra = input('Digite uma Letra: ').lower()
-  tentativa += 1
+  tentativas += 1
 
   resultado = ''
 
