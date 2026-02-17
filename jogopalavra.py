@@ -1,31 +1,27 @@
-palavra_secreta = "Python"
-tentativas = tentativas += 1
-
-i = palavra_secreta.count('')
-
-letras = palavra_secreta[i]
+palavra_secreta = "python"
 
 print("===ADVINHE A PALAVRA===")
 
-for palavra in palavra_secreta:
-    entrada = str(input ('Digite um letra: '))
 
-    print(' Suas tentativa: ', tentativa'x')
+tentativas = 0
 
-    if entrada == letras:
-        print(' Você acertou a letra: ' , letras)
+
+while True:
+  letra = input('Digite uma Letra: ').lower()
+  tentativa += 1
+
+  resultado = ''
+
+  for caracter in palavra_secreta:
+
+    if caracter == letra:
+      resultado += caracter
 
     else:
-        print('Você errou tente novamente')
+      resultado += '*'
 
-    for acerto in palavra_secreta:
-      palavra_chance = input('Digite a palavra: ')
+  print(resultado)
 
-      if palavra_chance == palavra_secreta:
-        print("Você acertou, fim de jogo!")
-        break
-
-      else:
-        print("Você errou tente novamente!")
-
-
+  if '*'  not in resultado:
+    print("Tu venceu")
+    break
