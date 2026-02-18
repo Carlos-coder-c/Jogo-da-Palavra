@@ -1,5 +1,7 @@
 palavra_secreta = "python"
 
+letras_acertadas = ''
+
 print("===ADVINHE A PALAVRA===")
 
 
@@ -12,9 +14,12 @@ while True:
 
   resultado = ''
 
+  if letra in palavra_secreta:
+    letras_acertadas += letra
+
   for caracter in palavra_secreta:
 
-    if caracter == letra:
+    if caracter in letra_acertadas:
       resultado += caracter
 
     else:
@@ -23,5 +28,6 @@ while True:
   print(resultado)
 
   if '*'  not in resultado:
-    print("Tu venceu")
+    print(f"Tu venceu  \
+    Tentativa: {tentativas}")
     break
